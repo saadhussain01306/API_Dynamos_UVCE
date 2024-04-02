@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Details</h2>
+        <div class="student-details">
+            <img src="pic.jpg" alt="Profile Image">
+            <div>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>College:</strong> Example College</p>
+                <p><strong>Current Semester:</strong> 3</p>
+                <p><strong>Stream of Study:</strong> Computer Science</p>
+            </div>
+        </div>
+
+        <h2>Attendance Details</h2>
+        <div class="attendance">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Mathematics</h3>
+                    <div class="attendance-buttons">
+                        <button class="plus" title="Attended">Attended</button> 
+                        <button class="minus" title="Not Attended">Not Attended</button>
+                    </div>
+                </div>
+                <div class="attendance-details">
+                    <div><strong>Percentage:</strong> 80%</div>
+                    <div><strong>Total Attended:</strong> 16</div>
+                    <div><strong>Total Classes:</strong> 20</div>
+                </div>
+                <div class="delete-button">Delete Subject</div>
+            </div>
+        </div>
+
+        <button class="add-subject">Add Subject</button>
+    </div>
+</body>
+</html>
