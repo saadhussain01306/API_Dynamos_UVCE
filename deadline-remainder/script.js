@@ -28,7 +28,8 @@ addTaskButton.addEventListener("click", () => {
 	<p>${task}</p>
 	<p>Priority: ${priority}</p>
 	<p>Deadline: ${deadline}</p>
-	<button class="mark-done">Mark Done</button>
+	<input type="radio" class="mark-done">Mark Done
+	<button class="delete-task">Delete</button>
 `;
 
     taskList.appendChild(taskItem);
@@ -43,5 +44,9 @@ taskList.addEventListener("click", (event) => {
         const taskItem = event.target.parentElement;
         taskItem.style.backgroundColor = "#f2f2f2";
         event.target.disabled = true;
+    }
+    if (event.target.classList.contains("delete-task")) {
+        const taskItem = event.target.parentElement;
+        taskList.removeChild(taskItem);
     }
 });
