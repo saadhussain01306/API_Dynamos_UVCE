@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading">My Deadlines</h1>
+
+    <div class="tasks-container">
+      <div class="active-tasks">
+        <h2>Active</h2>
+        <div class="task-card">
+          <p><strong>Task:</strong> Example Task 1</p>
+          <p><strong>Start Date:</strong> 2024-04-01</p>
+          <p><strong>End Date:</strong> 2024-04-10</p>
+          <form action="/tasks/delete/1" method="POST">
+            <input type="hidden" name="_method" value="DELETE"> <button class="delete-button" type="submit">Delete</button>
+          </form>
+        </div>
+        <form action="/tasks/add" method="POST" class="add-task-form">
+            <fieldset>
+                <legend>Task Name:</legend>
+                <input type="text" id="taskName" name="taskName" placeholder="Enter Task Name">
+            </fieldset>
+            <fieldset>
+                <legend>Start Date:</legend>
+                <input type="date" id="startDate" name="startDate" placeholder="Start Date">
+            </fieldset>
+            <fieldset>
+                <legend>End Date:</legend>
+                <input type="date" id="endDate" name="endDate" placeholder="End Date">
+            </fieldset>
+            <button type="submit">➕</button>
+        </form>
+      </div>
+
+      <div class="missed-tasks">
+        <h2>Missed</h2>
+        <div class="task-card">
+          <p><strong>Task:</strong> Example Task 2</p>
+          <p><strong>Start Date:</strong> 2024-03-15</p>
+          <p><strong>End Date:</strong> 2024-03-20</p>
+          <form action="/tasks/delete/2" method="POST">
+            <input type="hidden" name="_method" value="DELETE"> <button class="delete-button" type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
